@@ -7,11 +7,9 @@ import Example from './components/example';
 
 function App() {
   return (
-    
-      <DndProvider backend={HTML5Backend}>
-        <Example />
-      </DndProvider>
-    
+    <DndProvider backend={HTML5Backend}>
+      <Example />
+    </DndProvider>
   );
 }
 

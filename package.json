@@ -32,7 +32,8 @@
     "prepare": "husky install",
     "elint": "eslint .",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "ts":"tsc --project tsconfig.json --pretty --noEmit"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
