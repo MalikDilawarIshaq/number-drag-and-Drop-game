@@ -1,12 +1,17 @@
 import React from 'react';
 import './styles/tailwind.css';
 import './App.css';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import Example from './components/example';
 
 function App() {
   return (
-        <div className="flex justify-center bg-gray-500 text-white">
-      hello new here
-    </div>
+    
+      <DndProvider backend={HTML5Backend}>
+        <Example />
+      </DndProvider>
+    
   );
 }
 

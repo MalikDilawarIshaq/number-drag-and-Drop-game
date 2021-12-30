@@ -24,38 +24,45 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "no-console": "error",
-    "import/first": "error",
-    "react/prop-types": "off",
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "no-console": 1,
+    "import/first": 1,
+    "react/prop-types": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": [1],
+    "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
     "import/extensions": [
-      "error",
+      1,
       "ignorePackages",
       {
         "ts": "never",
         "tsx": "never"
       }
     ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": [
-      "error",
+      1,
       {
         "allowExpressions": true
       }
     ],
-    "max-len": ["warn", { "code": 80 }],
-    "import/prefer-default-export": "off",
+    "max-len": [2, { "code": 100 }],
+    "import/prefer-default-export": 0,
     "rules": {
       // disable the rule for all files
-      "@typescript-eslint/explicit-module-boundary-types": "off"
+      "@typescript-eslint/explicit-module-boundary-types": 0
     },
     "overrides": [
       {
         // enable the rule specifically for TypeScript files
         "files": ["*.ts", "*.tsx"],
         "rules": {
-          "@typescript-eslint/explicit-module-boundary-types": ["error"]
+          "@typescript-eslint/explicit-module-boundary-types": [1]
         }
       }
     ]
